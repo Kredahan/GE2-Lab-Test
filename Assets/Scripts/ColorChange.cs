@@ -9,6 +9,7 @@ public class ColorChange : MonoBehaviour
     public bool isRed = false;
     public bool isYellow = false;
     GameObject currentObject;
+    public GameObject CarRef;
 
     // Start is called before the first frame update
     void Start()
@@ -49,6 +50,14 @@ public class ColorChange : MonoBehaviour
         isRed = false;
         isYellow = false;
         isGreen = true;
+        for(int i = 0; i < 10; i++)
+        {
+            if(this.gameObject.transform.position == CarRef.GetComponent<CarSeek>().lightStates[i].greenLightPos)
+            {
+                CarRef.GetComponent<CarSeek>().lightStates[i].GreenToGo = true;
+            }
+        }
+
         yield break;
     }
 
@@ -60,6 +69,14 @@ public class ColorChange : MonoBehaviour
         isGreen = false;
         isRed = false;
         isYellow = true;
+
+        for (int i = 0; i < 10; i++)
+        {
+            if (this.gameObject.transform.position == CarRef.GetComponent<CarSeek>().lightStates[i].greenLightPos)
+            {
+                CarRef.GetComponent<CarSeek>().lightStates[i].GreenToGo = false;
+            }
+        }
         yield break;
     }
 
@@ -71,6 +88,14 @@ public class ColorChange : MonoBehaviour
         isYellow = false;
         isGreen = false;
         isRed = true;
+
+        for (int i = 0; i < 10; i++)
+        {
+            if (this.gameObject.transform.position == CarRef.GetComponent<CarSeek>().lightStates[i].greenLightPos)
+            {
+                CarRef.GetComponent<CarSeek>().lightStates[i].GreenToGo = false;
+            }
+        }
         yield break;
     }
 }

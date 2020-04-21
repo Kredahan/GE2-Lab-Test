@@ -9,7 +9,7 @@ public class SpawnTrafficLights : MonoBehaviour
     public int NoOfTrafficLights = 10;
     public GameObject[] TrafficLights; // An array of GameObjects that holds each traffic light
     public Vector3 carStartPoint;
-    GameObject Car;
+    public GameObject Car;
 
     // Start is called before the first frame update
     void Start()
@@ -31,6 +31,7 @@ public class SpawnTrafficLights : MonoBehaviour
     {
         for (int i = 0; i < NoLights; i++)
         {
+            bool greenCheck = false;
             float radius = NoLights; // ie: Radius == 10
             float angle = i * Mathf.PI * 2f / radius; // ex: 1 * 3.14 * 2f / 10
             //Vector3 newPos = transform.position + (new Vector3(Mathf.Cos(angle) * radius, -2, Mathf.Sin(angle) * radius));
@@ -43,18 +44,23 @@ public class SpawnTrafficLights : MonoBehaviour
             {
                 lightRenderer.material.SetColor("_Color", Color.red);
                 obj[i].GetComponent<ColorChange>().isRed = true;
+                greenCheck = false;
             }
             else if (colorPicker == 2)
             {
                 lightRenderer.material.SetColor("_Color", Color.green);
                 obj[i].GetComponent<ColorChange>().isGreen = true;
+                greenCheck = true; // greenCheck is only set to true in this case
             }
             else if (colorPicker == 3)
             {
                 lightRenderer.material.SetColor("_Color", Color.yellow);
                 obj[i].GetComponent<ColorChange>().isYellow = true;
+                greenCheck = false;
             }
 
+           
+            Car.GetComponent<CarSeek>().addToArray(i, greenCheck, newPos);
             Instantiate(obj[i], newPos, Quaternion.Euler(0, 0, 0));
         }
     }
