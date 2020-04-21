@@ -10,10 +10,12 @@ public class SpawnTrafficLights : MonoBehaviour
     public GameObject[] TrafficLights; // An array of GameObjects that holds each traffic light
     public Vector3 carStartPoint;
     public GameObject Car;
+    private AudioSource audio;
 
     // Start is called before the first frame update
     void Start()
     {
+        GetComponent<AudioSource>().Play();
         Car = GameObject.FindGameObjectWithTag("Car");
         carStartPoint = Car.transform.position;
         //carStartPoint = FindObjectOfType

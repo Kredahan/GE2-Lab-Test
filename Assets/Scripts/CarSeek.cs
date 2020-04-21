@@ -35,6 +35,7 @@ public class CarSeek : MonoBehaviour
             if(lightStates[i].GreenToGo == true)
             {
                 MovingCar.transform.position = Vector3.MoveTowards(transform.position, lightStates[i].greenLightPos, step);
+                Debug.DrawLine(transform.position, lightStates[i].greenLightPos);
             }
         }
     }
