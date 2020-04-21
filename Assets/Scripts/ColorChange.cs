@@ -46,17 +46,23 @@ public class ColorChange : MonoBehaviour
     {
         var lightRenderer = this.gameObject.GetComponent<Renderer>();
         lightRenderer.material.SetColor("_Color", Color.green);
-        yield return new WaitForSeconds(time);
-        isRed = false;
-        isYellow = false;
-        isGreen = true;
-        for(int i = 0; i < 10; i++)
+
+        for (int i = 0; i < 10; i++)
         {
-            if(this.gameObject.transform.position == CarRef.GetComponent<CarSeek>().lightStates[i].greenLightPos)
+            if (this.gameObject.transform.position == CarRef.GetComponent<CarSeek>().lightStates[i].greenLightPos)
             {
                 CarRef.GetComponent<CarSeek>().lightStates[i].GreenToGo = true;
             }
         }
+
+        yield return new WaitForSeconds(time);
+        
+        
+
+        isRed = false;
+        isYellow = false;
+        isGreen = true;
+
 
         yield break;
     }
@@ -65,10 +71,6 @@ public class ColorChange : MonoBehaviour
     {
         var lightRenderer = this.gameObject.GetComponent<Renderer>();
         lightRenderer.material.SetColor("_Color", Color.yellow);
-        yield return new WaitForSeconds(time);
-        isGreen = false;
-        isRed = false;
-        isYellow = true;
 
         for (int i = 0; i < 10; i++)
         {
@@ -77,6 +79,17 @@ public class ColorChange : MonoBehaviour
                 CarRef.GetComponent<CarSeek>().lightStates[i].GreenToGo = false;
             }
         }
+
+        yield return new WaitForSeconds(time);
+        
+
+
+
+        isGreen = false;
+        isRed = false;
+        isYellow = true;
+
+
         yield break;
     }
 
@@ -84,10 +97,6 @@ public class ColorChange : MonoBehaviour
     {
         var lightRenderer = this.gameObject.GetComponent<Renderer>();
         lightRenderer.material.SetColor("_Color", Color.red);
-        yield return new WaitForSeconds(time);
-        isYellow = false;
-        isGreen = false;
-        isRed = true;
 
         for (int i = 0; i < 10; i++)
         {
@@ -96,6 +105,16 @@ public class ColorChange : MonoBehaviour
                 CarRef.GetComponent<CarSeek>().lightStates[i].GreenToGo = false;
             }
         }
+
+
+        yield return new WaitForSeconds(time);
+        
+
+
+        isYellow = false;
+        isGreen = false;
+        isRed = true;
+
         yield break;
     }
 }
