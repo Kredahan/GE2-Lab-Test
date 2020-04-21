@@ -23,6 +23,7 @@ public class SpawnTrafficLights : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         
     }
 
@@ -34,7 +35,41 @@ public class SpawnTrafficLights : MonoBehaviour
             float angle = i * Mathf.PI * 2f / radius; // ex: 1 * 3.14 * 2f / 10
             //Vector3 newPos = transform.position + (new Vector3(Mathf.Cos(angle) * radius, -2, Mathf.Sin(angle) * radius));
             Vector3 newPos = location + (new Vector3(Mathf.Cos(angle) * radius, 0, Mathf.Sin(angle) * radius));
+
+            var lightRenderer = obj[i].GetComponent<Renderer>();
+            int colorPicker = Random.Range(1, 4);
+
+            if (colorPicker == 1)
+            {
+                lightRenderer.material.SetColor("_Color", Color.red);
+            }
+            else if (colorPicker == 2)
+            {
+                lightRenderer.material.SetColor("_Color", Color.green);
+            }
+            else if (colorPicker == 3)
+            {
+                lightRenderer.material.SetColor("_Color", Color.yellow);
+            }
+
             Instantiate(obj[i], newPos, Quaternion.Euler(0, 0, 0));
+
+           /* var lightRenderer = obj[i].GetComponent<Renderer>();
+            //int colorPicker = Random.Range(0, 3);
+            int colorPicker = 1;
+
+            if (colorPicker == 1)
+            {
+                lightRenderer.material.SetColor("_Color", Color.red);
+            }
+            else if(colorPicker == 2)
+            {
+                lightRenderer.material.SetColor("_Color", Color.green);
+            }
+            else if(colorPicker == 3)
+            {
+                lightRenderer.material.SetColor("_Color", Color.yellow);
+            }*/
         }
     }
 }
