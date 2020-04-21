@@ -133,6 +133,7 @@ GameObject:
   - component: {fileID: 251308587}
   - component: {fileID: 251308586}
   - component: {fileID: 251308585}
+  - component: {fileID: 251308589}
   m_Layer: 0
   m_Name: TrafficLight3
   m_TagString: Untagged
@@ -215,6 +216,21 @@ Transform:
   m_Father: {fileID: 2142281830}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &251308589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 251308584}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6b631fe986314b45b62661bb00d1f06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isGreen: 0
+  isRed: 0
+  isYellow: 0
 --- !u!1 &276754730
 GameObject:
   m_ObjectHideFlags: 0
@@ -227,6 +243,7 @@ GameObject:
   - component: {fileID: 276754733}
   - component: {fileID: 276754732}
   - component: {fileID: 276754731}
+  - component: {fileID: 276754735}
   m_Layer: 0
   m_Name: TrafficLight6
   m_TagString: Untagged
@@ -309,6 +326,21 @@ Transform:
   m_Father: {fileID: 2142281830}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &276754735
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 276754730}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6b631fe986314b45b62661bb00d1f06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isGreen: 0
+  isRed: 0
+  isYellow: 0
 --- !u!1 &403547276
 GameObject:
   m_ObjectHideFlags: 0
@@ -321,6 +353,7 @@ GameObject:
   - component: {fileID: 403547279}
   - component: {fileID: 403547278}
   - component: {fileID: 403547277}
+  - component: {fileID: 403547281}
   m_Layer: 0
   m_Name: TrafficLight1
   m_TagString: Untagged
@@ -403,6 +436,21 @@ Transform:
   m_Father: {fileID: 2142281830}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &403547281
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 403547276}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6b631fe986314b45b62661bb00d1f06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isGreen: 0
+  isRed: 0
+  isYellow: 0
 --- !u!1 &567511154
 GameObject:
   m_ObjectHideFlags: 0
@@ -415,6 +463,7 @@ GameObject:
   - component: {fileID: 567511157}
   - component: {fileID: 567511156}
   - component: {fileID: 567511155}
+  - component: {fileID: 567511159}
   m_Layer: 0
   m_Name: TrafficLight7
   m_TagString: Untagged
@@ -497,6 +546,21 @@ Transform:
   m_Father: {fileID: 2142281830}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &567511159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 567511154}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6b631fe986314b45b62661bb00d1f06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isGreen: 0
+  isRed: 0
+  isYellow: 0
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -777,6 +841,7 @@ GameObject:
   - component: {fileID: 1445175457}
   - component: {fileID: 1445175456}
   - component: {fileID: 1445175455}
+  - component: {fileID: 1445175459}
   m_Layer: 0
   m_Name: TrafficLight8
   m_TagString: Untagged
@@ -859,6 +924,21 @@ Transform:
   m_Father: {fileID: 2142281830}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1445175459
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1445175454}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6b631fe986314b45b62661bb00d1f06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isGreen: 0
+  isRed: 0
+  isYellow: 0
 --- !u!1 &1603229137
 GameObject:
   m_ObjectHideFlags: 0
@@ -871,6 +951,7 @@ GameObject:
   - component: {fileID: 1603229140}
   - component: {fileID: 1603229139}
   - component: {fileID: 1603229138}
+  - component: {fileID: 1603229142}
   m_Layer: 0
   m_Name: TrafficLight4
   m_TagString: Untagged
@@ -953,6 +1034,21 @@ Transform:
   m_Father: {fileID: 2142281830}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1603229142
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1603229137}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6b631fe986314b45b62661bb00d1f06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isGreen: 0
+  isRed: 0
+  isYellow: 0
 --- !u!1 &1795407662
 GameObject:
   m_ObjectHideFlags: 0
@@ -965,6 +1061,7 @@ GameObject:
   - component: {fileID: 1795407665}
   - component: {fileID: 1795407664}
   - component: {fileID: 1795407663}
+  - component: {fileID: 1795407667}
   m_Layer: 0
   m_Name: TrafficLight2
   m_TagString: Untagged
@@ -1047,6 +1144,21 @@ Transform:
   m_Father: {fileID: 2142281830}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1795407667
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1795407662}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6b631fe986314b45b62661bb00d1f06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isGreen: 0
+  isRed: 0
+  isYellow: 0
 --- !u!1 &1816738277
 GameObject:
   m_ObjectHideFlags: 0
@@ -1153,6 +1265,7 @@ GameObject:
   - component: {fileID: 1831206515}
   - component: {fileID: 1831206514}
   - component: {fileID: 1831206513}
+  - component: {fileID: 1831206517}
   m_Layer: 0
   m_Name: TrafficLight9
   m_TagString: Untagged
@@ -1235,6 +1348,21 @@ Transform:
   m_Father: {fileID: 2142281830}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1831206517
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1831206512}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6b631fe986314b45b62661bb00d1f06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isGreen: 0
+  isRed: 0
+  isYellow: 0
 --- !u!1 &2007914759
 GameObject:
   m_ObjectHideFlags: 0
@@ -1247,6 +1375,7 @@ GameObject:
   - component: {fileID: 2007914762}
   - component: {fileID: 2007914761}
   - component: {fileID: 2007914760}
+  - component: {fileID: 2007914764}
   m_Layer: 0
   m_Name: TrafficLight5
   m_TagString: Untagged
@@ -1329,6 +1458,21 @@ Transform:
   m_Father: {fileID: 2142281830}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2007914764
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2007914759}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6b631fe986314b45b62661bb00d1f06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isGreen: 0
+  isRed: 0
+  isYellow: 0
 --- !u!1 &2134012589
 GameObject:
   m_ObjectHideFlags: 0
@@ -1341,6 +1485,7 @@ GameObject:
   - component: {fileID: 2134012592}
   - component: {fileID: 2134012591}
   - component: {fileID: 2134012590}
+  - component: {fileID: 2134012594}
   m_Layer: 0
   m_Name: TrafficLight10
   m_TagString: Untagged
@@ -1423,6 +1568,21 @@ Transform:
   m_Father: {fileID: 2142281830}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2134012594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2134012589}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6b631fe986314b45b62661bb00d1f06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isGreen: 0
+  isRed: 0
+  isYellow: 0
 --- !u!1 &2135379952
 GameObject:
   m_ObjectHideFlags: 0

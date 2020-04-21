@@ -10,8 +10,6 @@ public class ColorChange : MonoBehaviour
     public bool isYellow = false;
     GameObject currentObject;
 
-
-
     // Start is called before the first frame update
     void Start()
     {
@@ -25,16 +23,19 @@ public class ColorChange : MonoBehaviour
 
         if(isRed == true)
         {
+            isRed = false;
             StartCoroutine(goGreen(randTime));
         }
 
-        if(isGreen == true)
+        else if(isGreen == true)
         {
+            isGreen = false;
             StartCoroutine(goYellow(4f));
         }
 
-        if(isYellow == true)
+        else if(isYellow == true)
         {
+            isYellow = false;
             StartCoroutine(goRed(randTime));
         }
         
@@ -46,7 +47,9 @@ public class ColorChange : MonoBehaviour
         lightRenderer.material.SetColor("_Color", Color.green);
         yield return new WaitForSeconds(time);
         isRed = false;
+        isYellow = false;
         isGreen = true;
+        yield break;
     }
 
     IEnumerator goYellow(float time)
@@ -55,7 +58,9 @@ public class ColorChange : MonoBehaviour
         lightRenderer.material.SetColor("_Color", Color.yellow);
         yield return new WaitForSeconds(time);
         isGreen = false;
+        isRed = false;
         isYellow = true;
+        yield break;
     }
 
     IEnumerator goRed(float time)
@@ -64,6 +69,8 @@ public class ColorChange : MonoBehaviour
         lightRenderer.material.SetColor("_Color", Color.red);
         yield return new WaitForSeconds(time);
         isYellow = false;
+        isGreen = false;
         isRed = true;
+        yield break;
     }
 }
