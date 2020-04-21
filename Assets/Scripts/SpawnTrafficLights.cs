@@ -17,16 +17,16 @@ public class SpawnTrafficLights : MonoBehaviour
         Car = GameObject.FindGameObjectWithTag("Car");
         carStartPoint = Car.transform.position;
         //carStartPoint = FindObjectOfType
-        instantiateInCircle(TrafficLights,carStartPoint,NoOfTrafficLights); // Passing in the Traffic Light array, the start position and the number of lights
+        instantiateInCircle(TrafficLights, carStartPoint, NoOfTrafficLights);
     }
 
     // Update is called once per frame
     void Update()
     {
-
         
     }
 
+    //**public void instantiateInCircle(GameObject[] obj, Vector3 location, int NoLights)
     public void instantiateInCircle(GameObject[] obj, Vector3 location, int NoLights)
     {
         for (int i = 0; i < NoLights; i++)
@@ -42,34 +42,20 @@ public class SpawnTrafficLights : MonoBehaviour
             if (colorPicker == 1)
             {
                 lightRenderer.material.SetColor("_Color", Color.red);
+                obj[i].GetComponent<ColorChange>().isRed = true;
             }
             else if (colorPicker == 2)
             {
                 lightRenderer.material.SetColor("_Color", Color.green);
+                obj[i].GetComponent<ColorChange>().isGreen = true;
             }
             else if (colorPicker == 3)
             {
                 lightRenderer.material.SetColor("_Color", Color.yellow);
+                obj[i].GetComponent<ColorChange>().isYellow = true;
             }
 
             Instantiate(obj[i], newPos, Quaternion.Euler(0, 0, 0));
-
-           /* var lightRenderer = obj[i].GetComponent<Renderer>();
-            //int colorPicker = Random.Range(0, 3);
-            int colorPicker = 1;
-
-            if (colorPicker == 1)
-            {
-                lightRenderer.material.SetColor("_Color", Color.red);
-            }
-            else if(colorPicker == 2)
-            {
-                lightRenderer.material.SetColor("_Color", Color.green);
-            }
-            else if(colorPicker == 3)
-            {
-                lightRenderer.material.SetColor("_Color", Color.yellow);
-            }*/
         }
     }
 }
